@@ -18,7 +18,11 @@ btns.forEach((btn) => {
 })
 
 // Function to clear the screen
-
 const clearDisplay = () => {
   display.value = "";
 }
+
+// Function to calculate percentage
+const percentage = () => {
+  display.value = display.value*0.01
+};
