@@ -31,3 +31,8 @@ const percentage = () => {
 const deleteNumber = () => {
   display.value = display.value.toString().slice(0,-1);
 }
+
+// Function to get final output
+const equalTo = () => {
+  display.value = eval(display.value);
+}
