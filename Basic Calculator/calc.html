@@ -22,9 +22,9 @@
     <div class="calculator">
       <input type="text" name="display" id="display" placeholder="0" disabled>
       <div>
-        <button class="operators" id="ac">AC</button>
-        <button class="operators" >DE</button>
-        <button class="operators" id="percent">%</button>
+        <button class="operators" id="ac" onclick="clearDisplay()">AC</button>
+        <button class="operators" onclick="deleteNumber()">DE</button>
+        <button class="operators" id="percent" onclick="percentage()">%</button>
         <button class="operators btn">÷</button>
       </div>
       <div>
@@ -48,7 +48,7 @@
       <div>
         <button class="btn">0</button>
         <button  class="btn">.</button>
-        <button class="operators equal">=</button>
+        <button class="operators equal" onclick="equalTo()">=</button>
       </div>
       
     </div>
