@@ -56,8 +56,8 @@ Each project is stored in its own folder with clean and readable code. Feel free
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/js-projects.git
-   cd js-projects
+   git clone https://github.com/your-username/JavaScript_Mini_Project.git
+   cd JavaScript_Mini_Project
 
 ## 📁 Folder Structure
 Each folder contains:
