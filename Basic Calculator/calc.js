@@ -16,3 +16,9 @@ btns.forEach((btn) => {
     display.value += btntext
   })
 })
+
+// Function to clear the screen
+
+const clearDisplay = () => {
+  display.value = "";
+}
