@@ -7,7 +7,7 @@
 
 .container {
   padding-block: 1.5rem;
-  background: #e0e2db;
+  /* background: #e0e2db; */
  
 }
 
@@ -116,13 +116,13 @@ button:active {
   background: rgba(224, 226, 219, 0.3);
 }
 
-.container p {
+/* .container p {
   font-weight: 600;
   font-style: italic;
   font-size: 1.25rem;
   text-align: center;
   
-}
+} */
 
 @media (min-width: 700px) {
 
@@ -130,14 +130,12 @@ button:active {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 50px);
-    /* place-items: center; */
-    gap: 0.5rem;
   }
 
   .btns {
     display: grid;
     grid-template-columns: repeat(9, 70px);
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
 
@@ -168,4 +166,10 @@ button:active {
     cursor: pointer;
   }
 
+  .equal {
+  grid-row: span 1;
+  width: 135px;
+  background-color: #FB8500;
+  font-size: 1rem;
+}
 }
