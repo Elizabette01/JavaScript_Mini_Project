@@ -49,9 +49,9 @@ const ln = () => {display.value = Math.log(display.value)};
 const l0g = () => {display.value = Math.log10(display.value)};
 const cubert = () => {display.value = Math.cbrt(display.value)};
 const squarert = () => {display.value = Math.sqrt(display.value)};
-const square = () => {display.value = Math.pow(2)};
-const cube = () => {display.value = Math.pow(3)};
-const abs = () => {display.value = Math.abs()};
+const square = () => {display.value = Math.pow(display.value, 2)};
+const cube = () => {display.value = Math.pow(display.value, 3)};
+const abs = () => {display.value = Math.abs(display.value)};
 
 // functions to calculate constants Pi and E
 const pi = () => {
