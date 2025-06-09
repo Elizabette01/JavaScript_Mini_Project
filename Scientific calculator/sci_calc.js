@@ -125,3 +125,25 @@ const deg = () => {
   let degree = rad * (180 / Math.PI);
   display.value = degree
 }
+
+// functions for calculating factorials
+const fact = () => {
+  let x = display.value;
+
+  if(x < 0){
+    display.value = "Err";
+  }
+
+  else if (x == 0) {
+    display.value = 1;
+  }
+
+  else {
+    let factorial = 1
+    for (i = 1; i <= x; i++){
+      factorial *= i
+    }
+    display.value = factorial
+  }
+ 
+}
