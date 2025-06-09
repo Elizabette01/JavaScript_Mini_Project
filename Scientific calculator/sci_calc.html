@@ -26,23 +26,23 @@
         <input type="text" name="display" id="display" placeholder="0" disabled>
         <div class="buttons-container">
           <div class="btns">
-            <button class="" onclick="">RAD</button>
-            <button onclick="">DEG</button>
-            <button class="" onclick="">x!</button>
+            <button class="" onclick="rad()">RAD</button>
+            <button onclick="deg()">DEG</button>
+            <button class="" onclick="fact()">x!</button>
             <button class="btn" >(</button>
             <button class="btn" >)</button>
-            <button class="operators" onclick="">AC</button>
-            <button class="operators" onclick="">DE</button>
-            <button class="operators" onclick="" id="percent">%</button>
+            <button class="operators" onclick="clearDisplay()">AC</button>
+            <button class="operators" onclick="deleteNumber()">DE</button>
+            <button class="operators" onclick="percentage()" id="percent">%</button>
             <button class="operators btn">÷</button>
           </div>
           
           <div class="btns">
-            <button class="">abs</button>
-            <button class="" onclick="">x<sup>y</sup></button>
-            <button class="" onclick="">x<sup>3</sup></button>
-            <button class="" onclick="">x<sup>2</sup></button>
-            <button class="" onclick="">log</button>
+            <button class="" onclick="abs()">abs</button>
+            <button class="" onclick="nthpow()">x<sup>y</sup></button>
+            <button class="" onclick="cube()">x<sup>3</sup></button>
+            <button class="" onclick="square()">x<sup>2</sup></button>
+            <button class="" onclick="log()">log</button>
             <button class="btn">7</button>
             <button class="btn">8</button>
             <button class="btn">9</button>
@@ -51,10 +51,10 @@
           
           <div class="btns">
             <button class="btn">,</button>
-            <button class="" onclick="">√x</button>
-            <button class="" onclick="">∛x</button>
-            <button class="" onclick=""><sup>y</sup>√x</button>
-            <button class="" onclick="">ln</button>
+            <button class="" onclick="squarert()">√x</button>
+            <button class="" onclick="cubert()">∛x</button>
+            <button class="" onclick="nthrt()"><sup>y</sup>√x</button>
+            <button class="" onclick="ln()">ln</button>
             <button class="btn">4</button>
             <button class="btn">5</button>
             <button class="btn">6</button>
@@ -62,11 +62,11 @@
           </div>
           
           <div class="btns">
-            <button class="" onclick="">sin</button>
-            <button class="" onclick="">cos</button>
-            <button class="" onclick="">tan</button>
-            <button class="" onclick="">e<sup>x</sup></button>
-            <button class="" onclick="">e</button>
+            <button class="" onclick="sin()">sin</button>
+            <button class="" onclick="cos()">cos</button>
+            <button class="" onclick="tan()">tan</button>
+            <button class="" onclick="exp()">e<sup>x</sup></button>
+            <button class="" onclick="econ()">e</button>
             <button class="btn">1</button>
             <button class="btn">2</button>
             <button class="btn">3</button>
@@ -74,14 +74,14 @@
           </div>
         
           <div class="btns">
-            <button class="" onclick="">asin</button>
-            <button class="" onclick="">acos</button>
-            <button class="" onclick="">atan</button>
-            <button class="" onclick="">π</button>
+            <button class="" onclick="sinh()">asin</button>
+            <button class="" onclick="cosh()">acos</button>
+            <button class="" onclick="tanh()">atan</button>
+            <button class="" onclick="pi()">π</button>
             <button class="btn">00</button>
             <button class="btn">0</button>
             <button class="btn">.</button>
-            <button class="equal" onclick="">=</button>
+            <button class="equal" onclick="equalTo()">=</button>
           </div>
         
         </div>
