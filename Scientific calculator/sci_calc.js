@@ -31,3 +31,7 @@ const clearDisplay = () => {
 const deleteNumber = () => {
   display.value = display.value.toString().slice(0,-1);
 }
+
+const equalTo = () => {
+  display.value = eval(display.value);
+}
