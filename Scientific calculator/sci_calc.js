@@ -26,3 +26,8 @@ const percentage = () => {
 const clearDisplay = () => {
   display.value = "";
 }
+
+// Function to delete from screen
+const deleteNumber = () => {
+  display.value = display.value.toString().slice(0,-1);
+}
