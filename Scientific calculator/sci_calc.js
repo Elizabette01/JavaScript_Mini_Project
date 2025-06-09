@@ -16,3 +16,8 @@ btns.forEach((btn) => {
     display.value += btntext
   })
 })
+
+// Function to calculate percentage
+const percentage = () => {
+  display.value = display.value*0.01
+};
