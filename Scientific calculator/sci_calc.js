@@ -69,7 +69,7 @@ const econ = () => {
   else  {display.value *= Math.E};
 }
 
-// functions for creating the nth root of 2 numbers separated by a comma
+// functions for calculating the nth root of 2 numbers separated by a comma
 const nthrt = () => {
   let values = display.value.split(',');
     if (values.length === 2) {
@@ -78,6 +78,28 @@ const nthrt = () => {
 
         if (!isNaN(base) && !isNaN(root)) {
             let result = Math.pow(base, 1 / root);
+            console.log(result)
+            display.value = result;
+       }
+        else {
+            display.value = 'Err';
+        }
+    } 
+    else {
+        display.value = 'Err';
+    }
+}
+
+// functions for calculating the nth power of 2 numbers separated by a comma
+
+const nthpow = () => {
+  let values = display.value.split(',');
+    if (values.length === 2) {
+        let base = parseFloat(values[0]);
+        let power = parseFloat(values[1]);
+
+        if (!isNaN(base) && !isNaN(power)) {
+            let result = Math.pow(base, power);
             console.log(result)
             display.value = result;
        }
