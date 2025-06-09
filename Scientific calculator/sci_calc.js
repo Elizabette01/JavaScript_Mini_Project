@@ -111,3 +111,17 @@ const nthpow = () => {
         display.value = 'Err';
     }
 }
+
+
+// degree to radian conversions and vice versa
+const rad = () => {
+  let deg = display.value;
+  let radian = deg * (Math.PI / 180);
+  display.value = radian
+}
+
+const deg = () => {
+  let rad = display.value;
+  let degree = rad * (180 / Math.PI);
+  display.value = degree
+}
