@@ -53,6 +53,7 @@ const square = () => {display.value = Math.pow(2)};
 const cube = () => {display.value = Math.pow(3)};
 const abs = () => {display.value = Math.abs()};
 
+// functions to calculate constants Pi and E
 const pi = () => {
   
   if(display.value === ''){
@@ -66,4 +67,25 @@ const econ = () => {
   display.value = Math.E
   }
   else  {display.value *= Math.E};
+}
+
+// functions for creating the nth root of 2 numbers separated by a comma
+const nthrt = () => {
+  let values = display.value.split(',');
+    if (values.length === 2) {
+        let base = parseFloat(values[0]);
+        let root = parseFloat(values[1]);
+
+        if (!isNaN(base) && !isNaN(root)) {
+            let result = Math.pow(base, 1 / root);
+            console.log(result)
+            display.value = result;
+       }
+        else {
+            display.value = 'Err';
+        }
+    } 
+    else {
+        display.value = 'Err';
+    }
 }
