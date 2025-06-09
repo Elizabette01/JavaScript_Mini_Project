@@ -51,4 +51,19 @@ const cubert = () => {display.value = Math.cbrt(display.value)};
 const squarert = () => {display.value = Math.sqrt(display.value)};
 const square = () => {display.value = Math.pow(2)};
 const cube = () => {display.value = Math.pow(3)};
-const abs = () => {display.value = Math.abs()}
+const abs = () => {display.value = Math.abs()};
+
+const pi = () => {
+  
+  if(display.value === ''){
+    display.value = Math.PI
+  }
+  else {display.value *= Math.PI;}
+};
+
+const econ = () => {
+  if(display.value === ''){
+  display.value = Math.E
+  }
+  else  {display.value *= Math.E};
+}
