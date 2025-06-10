@@ -19,6 +19,7 @@ chance.innerText = chances;
        
         let  guess = Number(playerNum.value);
    
+        // If guess is not a number or out of range
         if(isNaN(guess)){
           wrongAns.innerText = "Please enter a valid number";
           chances--;
@@ -39,6 +40,7 @@ chance.innerText = chances;
 
         else {
         
+          // CompNum = guess
             if(guess === compNum){
             
               chances--;
@@ -52,6 +54,7 @@ chance.innerText = chances;
             
             }
 
+             // CompNum != guess
             else{
               const hint = guess > compNum ? "High" : "Low"
               result.innerText = `too ${hint}! try again`;
@@ -59,6 +62,14 @@ chance.innerText = chances;
               result.style.color = "red"
               chances--
               chance.innerText = chances;
+            }
+
+            // Player runs out of chances
+            if (chances === 0){
+              result.innerText = `Game Over. The correct number was ${compNum}`;
+              wrongAns.innerText = "";
+              result.style.color = "red"
+              
             }
 
       }
