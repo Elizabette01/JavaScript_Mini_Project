@@ -83,3 +83,18 @@ const disableInputAndButton = () => {
   submitBtn.disabled = true;
 }
 
+
+// code to replay 
+const replay = () => {
+  const compNum = Math.floor(Math.random() * (maxNum - (minNum - 1))) + minNum;
+  chances = 10;
+
+  playerNum.value = "";
+  wrongAns.innerText = "";
+  result.innerText = "";
+
+  chance.innerText = chances;
+
+  playerNum.disabled = false;
+  submitBtn.disabled = false;
+}
