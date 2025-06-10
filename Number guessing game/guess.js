@@ -41,17 +41,25 @@ chance.innerText = chances;
         
             if(guess === compNum){
             
-            chances--;
-            chance.innerText = chances;
-            let attempts = 10 - chances
+              chances--;
+              chance.innerText = chances;
+              let attempts = 10 - chances
+              
+              result.innerText = `congratulations!!! You win. the answer is ${compNum}. it took you ${attempts} attempts`;
+              wrongAns.innerText = "";
+              result.style.fontWeight = "700";
+              result.style.color = "green";
             
-            result.innerText = `congratulations!!! You win. the answer is ${compNum}. it took you ${attempts} attempts`;
-            wrongAns.innerText = "";
-            result.style.fontWeight = "700";
-            result.style.color = "green";
-           
+            }
 
-          }
+            else{
+              const hint = guess > compNum ? "High" : "Low"
+              result.innerText = `too ${hint}! try again`;
+              wrongAns.innerText = "";
+              result.style.color = "red"
+              chances--
+              chance.innerText = chances;
+            }
 
       }
     }
