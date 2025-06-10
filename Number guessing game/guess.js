@@ -52,6 +52,7 @@ const playGame = () => {
       result.style.fontWeight = "700";
       result.style.color = "green";
     
+      disableInputAndButton();
     }
 
       // CompNum != guess
@@ -69,7 +70,7 @@ const playGame = () => {
       result.innerText = `Game Over. The correct number was ${compNum}`;
       wrongAns.innerText = "";
       result.style.color = "red"
-      
+      disableInputAndButton();
     }
 
   }
