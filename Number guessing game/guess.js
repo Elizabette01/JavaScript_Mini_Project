@@ -15,62 +15,70 @@ let chances = 10;
 chance.innerText = chances;
 
 // Code to initiate and play game
-    const playGame = () => {
-       
-        let  guess = Number(playerNum.value);
-   
-        // If guess is not a number or out of range
-        if(isNaN(guess)){
-          wrongAns.innerText = "Please enter a valid number";
-          chances--;
-          chance.innerText = chances;
-        }
+const playGame = () => {
+    
+  let  guess = Number(playerNum.value);
 
-        else if (guess < minNum){
-          wrongAns.innerText = "Your Number is less than range";
-          chances--;
-          chance.innerText = chances;
-        }
+  // If guess is not a number or out of range
+  if(isNaN(guess)){
+    wrongAns.innerText = "Please enter a valid number";
+    chances--;
+    chance.innerText = chances;
+  }
 
-        else if (guess > maxNum){
-          wrongAns.innerText = "Your Number is greater than range";
-          chances--;
-          chance.innerText = chances;
-        }
+  else if (guess < minNum){
+    wrongAns.innerText = "Your Number is less than range";
+    chances--;
+    chance.innerText = chances;
+  }
 
-        else {
-        
-          // CompNum = guess
-            if(guess === compNum){
-            
-              chances--;
-              chance.innerText = chances;
-              let attempts = 10 - chances
-              
-              result.innerText = `congratulations!!! You win. the answer is ${compNum}. it took you ${attempts} attempts`;
-              wrongAns.innerText = "";
-              result.style.fontWeight = "700";
-              result.style.color = "green";
-            
-            }
+  else if (guess > maxNum){
+    wrongAns.innerText = "Your Number is greater than range";
+    chances--;
+    chance.innerText = chances;
+  }
 
-             // CompNum != guess
-            else{
-              const hint = guess > compNum ? "High" : "Low"
-              result.innerText = `too ${hint}! try again`;
-              wrongAns.innerText = "";
-              result.style.color = "red"
-              chances--
-              chance.innerText = chances;
-            }
-
-            // Player runs out of chances
-            if (chances === 0){
-              result.innerText = `Game Over. The correct number was ${compNum}`;
-              wrongAns.innerText = "";
-              result.style.color = "red"
-              
-            }
-
-      }
+  else {
+  
+    // CompNum = guess
+    if(guess === compNum){
+    
+      chances--;
+      chance.innerText = chances;
+      let attempts = 10 - chances
+      
+      result.innerText = `congratulations!!! You win. the answer is ${compNum}. it took you ${attempts} attempts`;
+      wrongAns.innerText = "";
+      result.style.fontWeight = "700";
+      result.style.color = "green";
+    
     }
+
+      // CompNum != guess
+    else{
+      const hint = guess > compNum ? "High" : "Low"
+      result.innerText = `too ${hint}! try again`;
+      wrongAns.innerText = "";
+      result.style.color = "red"
+      chances--
+      chance.innerText = chances;
+    }
+
+    // Player runs out of chances
+    if (chances === 0){
+      result.innerText = `Game Over. The correct number was ${compNum}`;
+      wrongAns.innerText = "";
+      result.style.color = "red"
+      
+    }
+
+  }
+}
+
+
+// Disable input and button when game is over
+const disableInputAndButton = () => {
+  playerNum.disabled = true;
+  submitBtn.disabled = true;
+}
+
