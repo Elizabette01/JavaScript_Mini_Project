@@ -39,5 +39,19 @@ chance.innerText = chances;
 
         else {
         
+            if(guess === compNum){
+            
+            chances--;
+            chance.innerText = chances;
+            let attempts = 10 - chances
+            
+            result.innerText = `congratulations!!! You win. the answer is ${compNum}. it took you ${attempts} attempts`;
+            wrongAns.innerText = "";
+            result.style.fontWeight = "700";
+            result.style.color = "green";
+           
+
+          }
+
       }
     }
