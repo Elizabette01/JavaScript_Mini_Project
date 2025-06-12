@@ -38,3 +38,18 @@ FGColor.addEventListener ("input", () => {
   userFG = FGColor.value; 
   return;
 });
+
+
+// Function initiate QrCode generation
+generateBtn.addEventListener("click", (e) =>{
+  e.preventDefault();
+  if(inputTxt.value.length > 0){
+    generateQrCode();
+
+    downloadBtn.style.display = "block"
+  }
+  
+  else{
+    alert("Enter your text or url to generate your QR Code")
+  }
+});
