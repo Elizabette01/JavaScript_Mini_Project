@@ -21,7 +21,36 @@
 </head>
 <body>
 
-  
+   <div class="container">
+    <div class="qr_code_gen">
+      <h1>Qr code generator</h1>
+      <input type="text" placeholder="Enter your text or URL..." id="input_txt">
+      <div class="sizes">
+        <label>Selecet Size</label>
+        <select name="" id="sizes">
+          <!-- <option value="">select size</option> -->
+          <option value="100">100x100</option>
+          <option value="200">200x200</option>
+          <option value="300">300x300</option>
+          <option value="500">500x500</option>
+          <option value="700">700x700</option>
+          <option value="800">800x800</option>
+          <option value="1000">1000x1000</option>
+        </select>
+      </div>
+      <div class="color">
+        <label for="">Background:  <input type="color" name="" id="bg_color"></label>
+        <label for="">color:  <input type="color" name="" id="fg_color"></label>
+      </div>
+      <div id="qr_container"></div>
+      <div class="btn_container">
+        <button id="generate_btn">Generate</button>
+        <a id="download_btn"  download>Download</a>
+      </div >
+      
+    </div>
+  </div>
+
   <script src="./main.js"></script>
 
 </body>
