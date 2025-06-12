@@ -48,3 +48,52 @@ input::placeholder {
 input:focus {
   border: 2px solid #EF798A;
 }
+
+
+/* ====== Sizes container ====== */
+
+.sizes {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sizes select {
+  border: none;
+  background-color: #f9f9f9;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #00043050;
+  outline: none;
+}
+
+/* ====== color container ====== */
+
+.color {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.color label {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type='color']{
+  width: 2.5rem;
+  padding: 0;
+}
+
+#qr_container {
+  display: grid;
+  place-items: center;
+}
+
+#qr_container img {
+  max-width: 300px;
+  min-height: 300px; 
+  margin-block: 1rem;
+  padding: 1rem;
+  border: 0.5px solid #00043050;
+  border-radius: 5px;
+}
