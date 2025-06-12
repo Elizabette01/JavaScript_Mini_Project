@@ -67,3 +67,11 @@ const  generateQrCode = () => {
     colorLight:userBG,
   });
 };
+
+// function to download QR code
+downloadBtn.addEventListener('click', ()=> {
+  let qrImg = document.querySelector('#qr_container img');
+
+  let qrImgAtrr = qrImg.getAttribute("src");
+  downloadBtn.setAttribute("href", qrImgAtrr)
+})
