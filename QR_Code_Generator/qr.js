@@ -53,3 +53,17 @@ generateBtn.addEventListener("click", (e) =>{
     alert("Enter your text or url to generate your QR Code")
   }
 });
+
+
+// QR Code
+const  generateQrCode = () => {
+     qrContainer.innerHTML = "";
+
+  new QRCode(qrContainer, {
+    text:inputTxt.value,
+    width:userSize,
+    height:userSize,
+    colorDark:userFG,
+    colorLight:userBG,
+  });
+};
