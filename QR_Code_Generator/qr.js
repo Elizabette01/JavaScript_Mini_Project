@@ -19,3 +19,22 @@ window.onload = () => {
   userFG = "#000000";
   downloadBtn.style.display = "none"
 }
+
+
+sizes.addEventListener ("input", () => {
+  
+  userSize = sizes.value;
+  return;
+});
+
+BGColor.addEventListener ("input", () => {
+  
+  userBG = BGColor.value; 
+  return;
+});
+
+FGColor.addEventListener ("input", () => {
+  
+  userFG = FGColor.value; 
+  return;
+});
