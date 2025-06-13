@@ -1,5 +1,5 @@
 // Get the time of the date you want to countdown to in milliseconds.
-const countDownDate = new Date("Aug 26, 2024 00:00:00").getTime();
+const countDownDate = new Date("Aug 26, 2025 00:00:00").getTime();
 
 // Set interval function, used to update our timer every second (1000 milliseconds)
 const x = setInterval(() => {
@@ -20,5 +20,13 @@ const x = setInterval(() => {
   document.getElementById("hrs").innerHTML = (hours<10 ? "0" : "") + hours;
   document.getElementById("mins").innerHTML = (mins<10 ? "0" : "") + mins;
   document.getElementById("secs").innerHTML = (secs<10 ? "0" : "") + secs;
+
+  if(distance < 0) {
+    clearInterval(x);
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hrs").innerHTML = "00";
+    document.getElementById("mins").innerHTML = "00";
+    document.getElementById("secs").innerHTML = "00";
+  }
 
 }, 1000)
