@@ -8,4 +8,10 @@ const x = setInterval(() => {
   const now = new Date().getTime();
   const diff = countDownDate - now;
 
+  // Days, hrs, mins ans sec are calculated from the diff value
+  const days = Math.floor(diff/ (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
 }, 1000)
