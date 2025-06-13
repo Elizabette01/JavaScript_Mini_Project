@@ -14,4 +14,11 @@ const x = setInterval(() => {
   const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   const secs = Math.floor((diff % (1000 * 60)) / 1000);
 
+
+  // values updated in document
+  document.getElementById("days").innerHTML = (days<10 ? "0" : "") + days;
+  document.getElementById("hrs").innerHTML = (hours<10 ? "0" : "") + hours;
+  document.getElementById("mins").innerHTML = (mins<10 ? "0" : "") + mins;
+  document.getElementById("secs").innerHTML = (secs<10 ? "0" : "") + secs;
+
 }, 1000)
